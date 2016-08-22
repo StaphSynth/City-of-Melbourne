@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="David L. Allen">
+    <meta name="description" content="The city of Melbourne, Victoria">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="melbourne.css">
+    <link href="https://fonts.googleapis.com/css?family=Coiny|Patua+One" rel="stylesheet">
+    <script type="text/javascript" src="https://use.fontawesome.com/0523816ffe.js"></script>
+  </head>
+  <body>
+    <header>
+      <noscript><div id="noscript">JavaScript is turned off. Please <a href="http://enable-javascript.com/" target="_blank">enable JavaScript</a> for full use of this site.</div></noscript>
+      <div id="masthead">
+        <h1>The City of Melbourne</h1>
+      </div>
+      <nav id="mainMenu">
+        <div id="navIcon">
+          <a href="#"><i class="fa fa-bars"></i> Menu</a>
+        </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sights &#9662;</a>
+            <ul>
+              <li><a href="#">Parks</a></li>
+              <li><a href="#">Museums</a></li>
+              <li><a href="#">Public Spaces</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Shopping</a></li>
+          <li><a href="#">Cuisine</a></li>
+          <li><a href="#">Culture</a></li>
+          <li><a href="#">Further Information &#9662;</a>
+            <ul>
+              <li><a href="http://www.visitmelbourne.com/" target="_blank">Tourist Information</a></li>
+              <li><a href="http://www.melbourne.vic.gov.au/">City of Melbourne Home Page</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="mainContent">
+      <p>Situated on the Yarra River, Melbourne is a major centre of trade, industry and culture in Australia. The multicultural tapestry of the city affords a unique mix of attractions, entertainment and dining to suit any taste.</p>
+      <ul class="imageList">
+        <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/National_gallery_victoria_international.jpg" alt="Melbourne's National Gallery of Victoria" /><p>The National Gallery of Victoria is one of the world's most visited art museums.</p></a></li>
+        <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Albert_park_aerial.jpg" alt="Albert Park, aerial view" /><p>Albert Park, one of several inner-urban parks, which also hosts the Melbourne Grand Prix.</p></a></li>
+        <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/AFL_Grand_Final_2010_on_the_Melbourne_Cricket_Ground.jpg/800px-AFL_Grand_Final_2010_on_the_Melbourne_Cricket_Ground.jpg" alt="The Melbourne Cricket Ground, aerial view" /><p>The Melbourne Cricket Ground, centre of the city's sporting culture.</p></a></li>
+      </ul>
+    </div>
+
+    <footer>
+      <p>Creative commons 3.0</p>
+    </footer>
+
+    <!--Loads non-critical JavaScript after the page has been rendered-->
+    <script type="text/javascript">
+      function loadScriptPostRender() {
+        var element = document.createElement("script");
+        element.src = "http://code.jquery.com/jquery-1.11.0.min.js";
+        element.type = "text/javascript";
+        element.async = false;
+        document.body.appendChild(element);
+
+        element = document.createElement("script");
+        element.src = "melbourne.js";
+        element.type = "text/javascript";
+        element.async = false;
+        document.body.appendChild(element);
+      }
+      if (window.addEventListener)
+        window.addEventListener("load", loadScriptPostRender, false);
+      else if (window.attachEvent)
+        window.attachEvent("onload", loadScriptPostRender);
+      else window.onload = loadScriptPostRender;
+    </script>
+  </body>
+</html>
